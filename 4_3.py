@@ -1,10 +1,8 @@
 import pprint
 
-number = 3
-name = input('Enter a name: ')
-e_mail = input('Enter an e-mail: ')
-dict_info = {'name': name,
-             'e-mail': e_mail
-             }
-dictionary = {number: dict_info for number in range(number)}
+number = int(input('Enter the lenght of the dictionaty: '))
+names = [input('Enter a name: ') for _ in range(number)]
+e_mails = [input('Enter an e-mail: ') for _ in range(number)]
+dictionary = {i: {'name': names[i], 'e-mail': e_mails[i]} for i in range(number)}
+
 print(pprint.pprint(dictionary))
